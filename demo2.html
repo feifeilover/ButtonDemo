@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>下拉框</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function showCity(city) {
+			alert("你的家乡是：" + city );
+		}
+	</script>
+</head>
+<body>
+	你的家乡是：<select name="city" id="city" onchange="showCity(this.value)"> <!-- 这里注意用onchange -->
+		<option value="BJ">北京</option>
+		<option value="SH">上海</option>
+		<option value="SZ">深圳</option>
+	</select>
+</body>
+</html>

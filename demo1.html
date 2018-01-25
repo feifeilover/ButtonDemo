@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript复选框</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function showInst() {
+			var instElement = document.all("inst");
+			var str = "你的兴趣爱好：";
+			for(var x=0;x<instElement.length;x++) {
+				if(instElement[x].checked) { //如果被选中
+					str = str + instElement[x].value + ",";
+				}
+			}
+			alert(str);
+		}
+		function selectAll() {
+			var instElement = document.all("inst");
+			for(var x=0;x<instElement.length;x++) {
+				instElement[x].checked = document.getElementById("sela").checked;
+			}
+		}
+	</script>
+</head>
+<body>
+	你的兴趣是：<br>
+	<input type="checkbox" name="inst" id="inst" value="上网">上网<br>
+	<input type="checkbox" name="inst" id="inst" value="唱歌">唱歌<br>
+	<input type="checkbox" name="inst" id="inst" value="跳舞">跳舞<br>
+	<input type="checkbox" name="inst" id="inst" value="打豆豆">打豆豆<br>
+	<input type="checkbox" name="inst" id="inst" value="玩牌">玩牌<br>
+	<input type="checkbox" name="inst" id="inst" value="吃吃吃">吃吃吃<br>
+	<input type="checkbox" name="inst" id="inst" value="旅行">旅行<br>
+	<input type="checkbox" name="sela" id="sela" onclick="selectAll()">全选<br>
+	<button onclick="showInst()">显示</button>
+</body>
+</html>
